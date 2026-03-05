@@ -16,6 +16,9 @@ var is_moving: bool = false
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
 	current_hp = max_hp
+	# 放在 layer 2，球不会检测碰撞
+	collision_layer = 2
+	collision_mask = 2
 
 	# Create collision shape
 	var collision_shape = CollisionShape2D.new()

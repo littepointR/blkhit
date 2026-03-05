@@ -11,6 +11,7 @@ var screen_size: Vector2
 
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
+	collision_layer = 1
 
 	# Create collision shape
 	var collision_shape = CollisionShape2D.new()
